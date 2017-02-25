@@ -1,0 +1,6 @@
+[submodule "rpkg/bigWig"]
+	path = rpkg/bigWig
+	url = https://github.com/andrelmartins/bigWig.git
+[submodule "rpkg/QHMM"]
+	path = rpkg/QHMM
+	url = https://github.com/andrelmartins/QHMM.git
