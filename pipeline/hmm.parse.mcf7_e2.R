@@ -23,12 +23,12 @@ res = process.genome.qhmm(bwSet.mcf7_e2, bwBckSet.mcf7_e2, bwSet.mcf7_e2$GROcap.
 
 cat("Saving results ...\n")
 bed.mcf7_e2 = res$preds
-write.track.bed(bed.gm, filename="hg19.mcf7_e2.new_hmm2b.bed", "hmm2b.preds.mcf7_e2")
+write.track.bed(bed.mcf7_e2, filename="hg19.mcf7_e2.new_hmm2b.bed", "hmm2b.preds.mcf7_e2")
 
 #
 # create special tracks for M2 'peak' areas
 peak.col.plus = do.call("paste", c(as.list(col2rgb(gcol$cage)), list(sep=',')))
 peak.col.minus = do.call("paste", c(as.list(col2rgb(gcol$groseq)), list(sep=',')))
 
-peaks.gm = res$peaks
-write.track.bed(peaks.gm, filename="hg19.mcf7_e2.new_hmm2bp.bed", "hmm2bp.preds.mcf7_e2.peaks", color.plus = peak.col.plus, color.minus = peak.col.minus)
+peaks.mcf7_e2 = res$peaks
+write.track.bed(peaks.mcf7_e2, filename="hg19.mcf7_e2.new_hmm2bp.bed", "hmm2bp.preds.mcf7_e2.peaks", color.plus = peak.col.plus, color.minus = peak.col.minus)
