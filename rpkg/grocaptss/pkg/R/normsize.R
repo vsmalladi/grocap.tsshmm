@@ -8,7 +8,7 @@ total.reads <- function(bw) {
 
   if (is.null(bw))
     return(NA)
-  
+
   for (chrom in bw$chroms) {
     tmp = chromStepSum.bigWig(bw, chrom, 1, 0)
     total = total + sum(tmp)
@@ -26,5 +26,12 @@ compute.normalization <- function(bwSet) {
   lapply(bwSet, total.reads)
 }
 
-# norm = compute.normalization(bwSet)
-# save(norm, file="totals.norm.Rdata")
+#norm = compute.normalization(bwSet)
+#save(norm, file="totals.norm.Rdata")
+
+
+#norm.back = compute.normalization(es_back)
+#save(norm.back, file="../data/es.totals.norm.back.Rdata")
+
+#norm = compute.normalization(es_main)
+#save(norm, file="es.totals.norm.Rdata")
