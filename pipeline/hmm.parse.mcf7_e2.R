@@ -17,7 +17,7 @@ save(norm.mcf7_e2.back, file="../data/mcf7_e2.totals.norm.back.Rdata")
 
 load("../data/mcf7_e2.totals.norm.Rdata")
 load("../data/mcf7_e2.totals.norm.back.Rdata")
-scale.factor = (norm$GROcap.plus - norm$GROcap.minus) / (norm.mcf7_e2.back$GROcap.plus - norm.mcf7_e2.back$GROcap.minus)
+scale.factor = abs((norm$GROcap.plus - norm$GROcap.minus) / (norm.mcf7_e2.back$GROcap.plus - norm.mcf7_e2.back$GROcap.minus))
 
 res = process.genome.qhmm(bwSet.mcf7_e2, bwBckSet.mcf7_e2, bwSet.mcf7_e2$GROcap.plus$chroms, scale.factor)
 
