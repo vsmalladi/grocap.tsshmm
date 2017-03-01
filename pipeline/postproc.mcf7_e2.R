@@ -12,7 +12,7 @@ peaks.mcf7_e2 = read.table("hg19.mcf7_e2.new_hmm2bp.bed", skip=1)
 # scale.factor = 4.335949
 load("../data/mcf7_e2.totals.norm.Rdata")
 load("../data/mcf7_e2.totals.norm.back.Rdata")
-scale.factor = abs((norm$GROcap.plus - norm$GROcap.minus) / (norm.gm.back$GROcap.plus - norm.gm.back$GROcap.minus))
+scale.factor = abs((norm$GROcap.plus - norm$GROcap.minus) / (norm.mcf7_e2.back$GROcap.plus - norm.mcf7_e2.back$GROcap.minus))
 
 cat(" * Applying filter ...\n")
 preds.mcf7_e2.filtered = filter.split(preds.mcf7_e2, peaks.mcf7_e2, scale.factor, 100)
