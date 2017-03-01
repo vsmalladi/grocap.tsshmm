@@ -25,7 +25,7 @@ stepcov.preds.hmm = step.coverage(preds.hmm, chroms, bwSet.mcf7_e2, bwBckSet.mcf
 stepcov.preds.post2 = step.coverage(preds.post2, chroms, bwSet.mcf7_e2, bwBckSet.mcf7_e2, scale.factor, n.cores = n.cores)
 
 # plot step coverage information
-pdf("sup.s1.panelC.new.pdf", width=14, height = 3)
+pdf("sup.s1.panelC.mcf7_e2.pdf", width=14, height = 3)
 opar = par(no.readonly=TRUE)
 par(mar=c(3, 4, 2, 1) + 0.1, font = 2, font.lab = 2)
 par(mfrow=c(1,2))
@@ -88,7 +88,7 @@ pairs.plus = read.table("hg19.mcf7_e2.new_hmm2b.post2.pair_plus.bed")
 pairs.minus = read.table("hg19.mcf7_e2.new_hmm2b.post2.pair_minus.bed")
 
 
-readcov.pairs = read.coverage(rbind(pairs.plus, pairs.minus), chroms, bwSet.gm, scale.factor, n.cores = n.cores)
+readcov.pairs = read.coverage(rbind(pairs.plus, pairs.minus), chroms, bwSet.mcf7_e2, scale.factor, n.cores = n.cores)
 
 
 #
