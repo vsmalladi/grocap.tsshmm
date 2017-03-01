@@ -9,7 +9,7 @@ bwBckSet.mcf7_e2 = backBwSet.grocap(basePath = commonDatasetPath, cellLine="E2")
 #
 load("../data/mcf7_e2.totals.norm.Rdata")
 load("../data/mcf7_e2.totals.norm.back.Rdata")
-scale.factor = abs((norm$GROcap.plus - norm$GROcap.minus) / (norm.gm.back$GROcap.plus - norm.gm.back$GROcap.minus))
+scale.factor = abs((norm$GROcap.plus - norm$GROcap.minus) / (norm.mcf7_e2.back$GROcap.plus - norm.mcf7_e2.back$GROcap.minus))
 
 
 # load predictions
