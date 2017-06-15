@@ -27,12 +27,12 @@ cat(" * Post filter trim (skip expansion) ...\n")
 preds.mcf7_e2.filtered.post2a = edge.trim2(preds.mcf7_e2.filtered, bwSet.mcf7_e2, bwBckSet.mcf7_e2, scale.factor)
 
 cat(" * Saving post-processed ...\n")
-write.bed(preds.mcf7_e2.filtered, "hg19.mcf7_e2.new_hmm2b.filtered.bed")
-write.bed(preds.mcf7_e2.filtered.post1, "hg19.mcf7_e2.new_hmm2b.post1.bed")
-write.bed(preds.mcf7_e2.filtered.post2b, "hg19.mcf7_e2.new_hmm2b.post2b.bed")
-write.bed(preds.mcf7_e2.filtered.post2a, "hg19.mcf7_e2.new_hmm2b.post2a.bed")
+write.bed(preds.mcf7_e2.filtered, "../peaks/hg19.mcf7_e2.new_hmm2b.filtered.bed")
+write.bed(preds.mcf7_e2.filtered.post1, "../peaks/hg19.mcf7_e2.new_hmm2b.post1.bed")
+write.bed(preds.mcf7_e2.filtered.post2b, "../peaks/hg19.mcf7_e2.new_hmm2b.post2b.bed")
+write.bed(preds.mcf7_e2.filtered.post2a, "../peaks/hg19.mcf7_e2.new_hmm2b.post2a.bed")
 # actually used
-write.bed(preds.mcf7_e2.filtered.post2a, "hg19.mcf7_e2.new_hmm2b.post2.bed")
+write.bed(preds.mcf7_e2.filtered.post2a, "../peaks/hg19.mcf7_e2.new_hmm2b.post2.bed")
 
 
 cat(" * Creating pairs ...\n")
@@ -40,14 +40,14 @@ pairs.150.gm.b = create.pairs(preds.mcf7_e2.filtered.post2b, 150)
 pairs.150.gm.a = create.pairs(preds.mcf7_e2.filtered.post2a, 150)
 
 cat(" * Saving pairs ...\n")
-write.bed(pairs.150.gm.b$minus, "hg19.mcf7_e2.new_hmm2b.post2b.pair_minus.bed")
-write.bed(pairs.150.gm.b$plus, "hg19.mcf7_e2.new_hmm2b.post2b.pair_plus.bed")
+write.bed(pairs.150.gm.b$minus, "../peaks/hg19.mcf7_e2.new_hmm2b.post2b.pair_minus.bed")
+write.bed(pairs.150.gm.b$plus, "../peaks/hg19.mcf7_e2.new_hmm2b.post2b.pair_plus.bed")
 
-write.bed(pairs.150.gm.a$minus, "hg19.mcf7_e2.new_hmm2b.post2a.pair_minus.bed")
-write.bed(pairs.150.gm.a$plus, "hg19.mcf7_e2.new_hmm2b.post2a.pair_plus.bed")
+write.bed(pairs.150.gm.a$minus, "../peaks/hg19.mcf7_e2.new_hmm2b.post2a.pair_minus.bed")
+write.bed(pairs.150.gm.a$plus, "../peaks/hg19.mcf7_e2.new_hmm2b.post2a.pair_plus.bed")
 # actually used
-write.bed(pairs.150.gm.a$minus, "hg19.mcf7_e2.new_hmm2b.post2.pair_minus.bed")
-write.bed(pairs.150.gm.a$plus, "hg19.mcf7_e2.new_hmm2b.post2.pair_plus.bed")
+write.bed(pairs.150.gm.a$minus, "../peaks/hg19.mcf7_e2.new_hmm2b.post2.pair_minus.bed")
+write.bed(pairs.150.gm.a$plus, "../peaks/hg19.mcf7_e2.new_hmm2b.post2.pair_plus.bed")
 
 
 cat(" * Creating single ...\n")
@@ -55,7 +55,7 @@ single.gm.b = create.single(preds.gm.filtered.post2b, 250)
 single.gm.a = create.single(preds.gm.filtered.post2a, 250)
 
 cat(" * Writing single ...\n")
-write.bed(single.gm.b, "hg19.gm12878.new_hmm2b.post2b.single.bed")
-write.bed(single.gm.a, "hg19.gm12878.new_hmm2b.post2a.single.bed")
+write.bed(single.gm.b, "../peaks/hg19.gm12878.new_hmm2b.post2b.single.bed")
+write.bed(single.gm.a, "../peaks/hg19.gm12878.new_hmm2b.post2a.single.bed")
 # actually used
-write.bed(single.gm.a, "hg19.gm12878.new_hmm2b.post2.single.bed")
+write.bed(single.gm.a, "../peaks/hg19.gm12878.new_hmm2b.post2.single.bed")

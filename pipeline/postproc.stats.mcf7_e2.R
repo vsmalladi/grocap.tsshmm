@@ -13,8 +13,8 @@ scale.factor = abs((norm$GROcap.plus - norm$GROcap.minus) / (norm.mcf7_e2.back$G
 
 
 # load predictions
-preds.hmm = read.table("hg19.mcf7_e2.new_hmm2b.bed", skip = 1)
-preds.post2 = read.table("hg19.mcf7_e2.new_hmm2b.post2.bed")
+preds.hmm = read.table("../peaks/hg19.mcf7_e2.new_hmm2b.bed", skip = 1)
+preds.post2 = read.table("../peaks/hg19.mcf7_e2.new_hmm2b.post2.bed")
 
 
 # step type coverage
@@ -25,7 +25,7 @@ stepcov.preds.hmm = step.coverage(preds.hmm, chroms, bwSet.mcf7_e2, bwBckSet.mcf
 stepcov.preds.post2 = step.coverage(preds.post2, chroms, bwSet.mcf7_e2, bwBckSet.mcf7_e2, scale.factor, n.cores = n.cores)
 
 # plot step coverage information
-pdf("sup.s1.panelC.mcf7_e2.pdf", width=14, height = 3)
+pdf("../peaks/sup.s1.panelC.mcf7_e2.pdf", width=14, height = 3)
 opar = par(no.readonly=TRUE)
 par(mar=c(3, 4, 2, 1) + 0.1, font = 2, font.lab = 2)
 par(mfrow=c(1,2))
